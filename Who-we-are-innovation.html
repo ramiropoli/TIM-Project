@@ -29,7 +29,7 @@
   </head>
 
   <body>
-      <nav class="navbar navbar-justified navbar-fixed-top">
+      <nav class="navbar navbar-justified">
           <div class="container2">
               <div class="navbar-header">
                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
@@ -50,15 +50,7 @@
                       </div>
                       <button type="submit" class="btn btn-success">Sign in</button>
                   </form>
-              </div><!--/.navbar-collapse -->
-          </div>
-      </nav>
-      <div class="big-container">
-        <div class="menu2">
-          <div class="navbar-wrapper">
-              <div class="container">
-                  <nav>
-                      <ul class="nav navbar-default">
+                   <ul id="menu-mobile" class="nav navbar-default">
                           <li><a href="#">Home</a></li>
                           <li class="dropdown active">
                               <a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Who we are <span class="caret"></span></a>
@@ -108,6 +100,61 @@
                           </li>
                           <li><a href="#">Highlights</a></li>
                       </ul>
+                  
+              </div><!--/.navbar-collapse -->
+          </div>
+      </nav>
+      <div class="big-container" style="position:relative;">
+          <div class="navbar-wrapper">
+              <div class="container">
+                  <nav>
+                      <ul id="menu-accordeon" class="nav navbar-default">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Who we are</a>
+                    <ul>
+                        <li><a href="#">Innovation</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Projects</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">The group</a>
+                    <ul>
+                        <li><a href="#">Group Description</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Business & Market</a></li>
+                        <li><a href="#">For Investors</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Category of devices</a>
+                    <ul>
+                        <li><a href="#">Smartphone & Telephones</a></li>
+                        <li><a href="#">Tablet & Computer</a></li>
+                        <li><a href="#">Modem & Networking</a></li>
+                        <li><a href="#">Tv & SmartLiving</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Promotions</a></li>
+                <li><a href="#">Category of services</a>
+              <ul>
+                 <li><a href="#">Tv & Entertainment</a></li>
+                 <li><a href="#">Health & Wellness</a></li>
+                 <li><a href="#">Home & Family</a></li>
+                 <li><a href="#">Personal Services</a></li>
+              </ul>
+           </li>
+                <li><a href="#">Category of assistance</a>
+                    <ul>
+                        <li><a href="#">Line & Management</a></li>
+                        <li><a href="#">Costs & Payments control</a></li>
+                        <li><a href="#">Hardware & Configuration Support</a></li>
+                        <li><a href="#">SmartLife</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Highlights</a></li>
+                      
+        </ul>
+                     
                   </nav>
               </div>
           </div>
@@ -134,18 +181,17 @@
             </div>
             <div class="col-md-4">
                 <h1>TIM Values</h1>
-                    <base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/">
-                        <div id="slider">
-                            <figure>
-                                <img src="ImmaginiTIM/img1.jpg" alt>
-                                <img src="ImmaginiTIM/img2.jpg" alt>
-                                <img src="ImmaginiTIM/img3.jpg" alt>
-                                <img src="ImmaginiTIM/img4.jpg" alt>
-                                <img src="ImmaginiTIM/img5.jpg" alt>
-                            </figure>
-                        </div>
+                <div id="slider">
+                    <figure>
+                        <img src="ImmaginiTIM/img2.jpg "style="width:100">
+                        <img src="ImmaginiTIM/img3.jpg" style="width:100">
+                        <img src="ImmaginiTIM/img4.jpg" style="width:100">
+                        <img src="ImmaginiTIM/img5.jpg" style="width:100">
+                        <img src="ImmaginiTIM/img1.jpg" style="width:100">
+                    </figure>
+                </div>
             </div>
-        </div>
+      </div>
             </div>
       <div class="container">
           <div class="jumbotron">
@@ -155,7 +201,6 @@
                    <div class="spacer"></div>
               </div>
           </div>
-      </div>
       </div>
       </div>
       <!-- Site footer -->

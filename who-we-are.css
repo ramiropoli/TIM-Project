@@ -1,8 +1,3 @@
-body {
-  padding-top: 50px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-}
 .navbar-brand {
     float: left;
     height: 100%;
@@ -25,9 +20,10 @@ body {
     float: right
 }
 .navbar-justified{
-    position:absolute;
+    position:static;
+    margin-bottom:0px;
     color: #FFFFFF;
-   background-image: linear-gradient(to top, #000066 0%, #0000e6  100%);
+    background-image: linear-gradient(to top, #000066 0%, #0000e6  100%);
 }
 .navbar-form{
     padding-top: 20px;
@@ -48,23 +44,7 @@ body {
     text-align: center;
     
 }
-menu {
-    
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    padding: 5px 0;
-    margin: 0px 0 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 0px solid rgba(0,0,0,.15);
-    border-radius: 4px;
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
-}
+
 .container-video{
     position: relative;
 }
@@ -80,18 +60,19 @@ menu {
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  margin-left:10%;
+  margin-top:5%;
+  margin-left:0%;
   text-align:justify;
   background-image: linear-gradient(to top, #f5f5f0 0%, #e0e0d1 100%);
   width: 80%;
 }
 .row{
     padding-bottom: 5%;
-    margin-left: 25%;
+    margin-left: 19%;
     width:80%;
 }
 .col-md-4{
-    padding-top:2%;
+    padding-top:0;
     width: 50%;
      background-image: linear-gradient(to top, #f5f5f0 0%, #e0e0d1 100%);
 }
@@ -151,21 +132,15 @@ menu {
     border-radius: 0 5px 5px 0;
   }
 }
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
-}
 
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper{
-     position: relative;
+    position: absolute;
     left: 0px;
-    width:100%;
-    padding-top:8%;
-    padding-bottom: 10%;
+    width:15%;
+    top:0px;
+    bottom:0px;
+    background-color:crimson;
 }
 .navbar-wrapper > .container {
   padding-right: 0px;
@@ -187,12 +162,98 @@ menu {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
+@media (max-width: 768px) {
+.navbar-wrapper{
+     position: relative;
+    left: 0px;
+    width:100%;
+}
+#menu-accordeon{
+    display:none;
+}
+    .navbar-toggle{
+        background-color:darkgray;
+    }
+    .navbar-header .navbar-toggle:hover {
+    background-color: #ddd;
+}
+    .navbar-header .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+.navbar-header .navbar-toggle {
+    border-color: #ddd;
+}
+    .jumbotron{
+        margin-left:15%;
+    }
+}
 @media (min-width: 768px) {
-  /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 12%;
-  }
+#menu-mobile{
+        display: none;
+    }
+#menu-accordeon {
+  padding-left: 0%;
+  margin:0;
+  list-style:none;
+  text-align: center;
+  width: 100%;
+}
+#menu-accordeon ul {
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+}
+#menu-accordeon li {
+   background-color:#729EBF; 
+    background-image: -webkit-linear-gradient(top, #2952a3 0%, #142952 100%);
+   background-image: linear-gradient(to bottom, #2952a3 0%, #142952 100%);
+   border-radius: 2px;
+   margin-bottom:2px;
+   box-shadow: 3px 3px 3px #999;
+   border:solid 1px #333A40
+}
+#menu-accordeon li li {
+   max-height:0;
+   overflow: hidden;
+   transition: all .5s;
+   border-radius:0;
+   background: #444;
+   box-shadow: none;
+   border:none;
+   margin:0;
+}
+#menu-accordeon a {
+  display:block;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 0;
+  font-size:1.5em;
+}
+#menu-accordeon ul li a, #menu-accordeon li:hover li a {
+  font-size:1em
+}
+#menu-accordeon li:hover {
+   background: #729EBF;
+    }
+#menu-accordeon li li:hover {
+   background: #999;
+   
+}
+#menu-accordeon ul li:last-child {
+   border-radius: 0 0 6px 6px;
+   border:none;
+}
+#menu-accordeon li:hover li {
+  max-height: 10em;
+}
+  
   .navbar-wrapper .container {
     padding-right: 0px;
     padding-left: 0px;
@@ -212,11 +273,18 @@ menu {
     height: 100%;
 }
     .jumbotron {
-  margin-left:25%;
+  margin-left:19%;
   text-align:justify;
   background-image: linear-gradient(to top, #f5f5f0 0%, #e0e0d1 100%);
   width: 80%;
 }
+     /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -234,3 +302,25 @@ menu {
 .dropdown-menu.vertical-dropdown-menu{
     background-image: linear-gradient(to top, #f5f5f0 0%,#ddd   100%);
     }
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
