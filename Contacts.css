@@ -157,6 +157,16 @@
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 @media (max-width: 768px) {
+.panel-info{
+    margin-bottom:0;
+    margin-left: 22%;
+    margin-right: 22%;
+}
+.panel-primary{
+    margin-right:2%;
+    margin-left:2%;
+    margin-bottom: 0;
+}
 .navbar-wrapper{
      position: relative;
     left: 0px;
