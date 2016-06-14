@@ -4,9 +4,6 @@
     padding: 0;
     line-height: 20px;
 }
-.row img{
-    width:100%;
-}
 .footer {
   margin-top: 0px;
   padding-top: 30px;
@@ -197,12 +194,12 @@
     font-size: 21px;
     line-height: 1.4;
     }
-.row img{
-    width:100%;
-}
 .navbar-wrapper{
      position: relative;
     left: 0px;
+    width:100%;
+}
+.row img{
     width:100%;
 }
 #menu-accordeon{
@@ -299,7 +296,6 @@
     padding-right: 0;
     padding-left: 0;
   }
-
   /* The navbar becomes detached from the top, so we round the corners */
   .navbar-wrapper .navbar {
     border-radius: 4px;
