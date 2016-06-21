@@ -3,6 +3,10 @@
     width:100%;
 }
 
+#path{
+    padding-left: 15%;
+    margin-left: 1%;
+}
 .col-md-6{
     padding-left: 15%;
 }
@@ -182,6 +186,9 @@
     width:100%;
 }
 
+#path{
+    padding-left: 1%;
+    }
 .col-md-6{
     padding-left: 0%;    
     }
@@ -351,4 +358,7 @@
 .marketing .col-lg-4 p {
   margin-right: 10px;
   margin-left: 10px;
+}
+.featurette{
+    margin: auto;
 }

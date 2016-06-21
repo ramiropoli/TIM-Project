@@ -22,6 +22,10 @@
 #containerback{
     padding-left: 15%;
 }
+#path{
+    padding-left: 15%;
+    margin-left: 1%;
+}
 .panel-group{
     padding-left: 15%;
 }
@@ -216,6 +220,15 @@
 .row img{
     width:100%;
 }
+.panel-group{
+    margin-left: 1%;
+    padding-left: 1%;
+    margin-right: 1%;
+    padding-right: 1%;
+    }
+#path{
+    padding-left: 1%;
+    }
 #menu-accordeon{
     display:none;
 }

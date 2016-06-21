@@ -19,6 +19,10 @@
 .align-right{
     float: right
 }
+#path{
+    padding-left: 15%;
+    margin-left: 1%;
+}
 .navbar-justified{
     position:static;
     margin-bottom:0px;
@@ -183,6 +187,9 @@
     left: 0px;
     width:100%;
 }
+#path{
+    padding-left: 1%;
+    }
 #menu-accordeon{
     display:none;
 }
@@ -344,4 +351,7 @@
 .marketing .col-lg-4 p {
   margin-right: 10px;
   margin-left: 10px;
+}
+.featurette{
+    margin: auto;
 }

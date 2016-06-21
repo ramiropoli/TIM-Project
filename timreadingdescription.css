@@ -11,6 +11,11 @@
     text-align: right;
     margin-left: 8%;
 }
+
+#path{
+    padding-left: 15%;
+    margin-left: 1%;
+}
 .footer {
   margin-top: 0px;
   padding-top: 30px;
@@ -235,10 +240,11 @@
     line-height: 1.4;
     }
 .row{
-
-    margin-left: 0%;
-   
+    margin-left: 0%;   
 }
+#path{
+    padding-left: 1%;
+    }
     #col2{
         margin-right: 5%;
         margin-left:15%;

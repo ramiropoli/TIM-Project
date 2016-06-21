@@ -13,6 +13,11 @@
   z-index: 1;
 }
 
+#path{
+    padding-left: 15%;
+    margin-left: 1%;
+}
+
 .align-left{
     float:left
 }
@@ -183,6 +188,9 @@
     left: 0px;
     width:100%;
 }
+#path{
+    padding-left: 1%;
+    }
 #menu-accordeon{
     display:none;
 }
@@ -345,3 +353,13 @@
   margin-right: 10px;
   margin-left: 10px;
 }
+.col-md-5{
+    padding-left: 1%;
+}
+.col-md-7{
+    padding-left: 1%;
+}
+.featurette{
+    margin: auto
+    }
+
