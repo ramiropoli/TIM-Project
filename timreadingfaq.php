@@ -13,10 +13,51 @@ try {
 } catch(PDOException $e) {
   echo 'Attenzione: '.$e->getMessage();
 }
-$sql = $db->prepare("SELECT * FROM actrules where id=1");
+$sql = $db->prepare("SELECT * FROM faq where id=21");
 $sql->execute(); 
 $query_result = $sql->fetchAll();
-$timvision = $query_result[0];
+$q1 = $query_result[0];
+
+$sql = $db->prepare("SELECT * FROM faq where id=22");
+$sql->execute(); 
+$query_result = $sql->fetchAll();
+$q2 = $query_result[0];
+
+$sql = $db->prepare("SELECT * FROM faq where id=23");
+$sql->execute(); 
+$query_result = $sql->fetchAll();
+$q3 = $query_result[0];
+
+$sql = $db->prepare("SELECT * FROM faq where id=24");
+$sql->execute(); 
+$query_result = $sql->fetchAll();
+$q4 = $query_result[0];
+
+
+$sql = $db->prepare("SELECT * FROM faq where id=25");
+$sql->execute(); 
+$query_result = $sql->fetchAll();
+$q5 = $query_result[0];
+
+$sql = $db->prepare("SELECT * FROM faq where id=26");
+$sql->execute(); 
+$query_result = $sql->fetchAll();
+$q6 = $query_result[0];
+
+$sql = $db->prepare("SELECT * FROM faq where id=27");
+$sql->execute(); 
+$query_result = $sql->fetchAll();
+$q7 = $query_result[0];
+
+$sql = $db->prepare("SELECT * FROM faq where id=28");
+$sql->execute(); 
+$query_result = $sql->fetchAll();
+$q8 = $query_result[0];
+
+$sql = $db->prepare("SELECT * FROM faq where id=29");
+$sql->execute(); 
+$query_result = $sql->fetchAll();
+$q9 = $query_result[0];
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +72,7 @@ $timvision = $query_result[0];
   
     <!--<link rel="icon" href="C:\Users\Marco\Desktop\prove html\bootstrap-3.3.6\docs\favicon.ico">-->
 
-    <title>TV - Activation &amp; Rules</title>
+    <title>TIMReading - FAQ</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-3.3.6\css\bootstrap.min.css" rel="stylesheet">
@@ -40,7 +81,7 @@ $timvision = $query_result[0];
     <link href="bootstrap-3.3.6\css\ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="tvactrules.css" rel="stylesheet">
+    <link href="timreadingfaq.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -180,42 +221,120 @@ $timvision = $query_result[0];
               </div>
           </div>
           
-    <div class="container" id="path">
+<div class="container" id="path">
     <p>
-    <a href="category-of-services.html">Category of Services</a> > <a href="tv-entertainment.html">TV & Entertainment</a> > <a href="tv.html">TV</a> > TV Activation & Rules
+    <a href="category-of-services.html">Category of Services</a> > <a href="tv-entertainment.html">TV & Entertainment</a> > <a href="timreading.html">TIM Reading</a> > TIM Reading FAQ
     </p>      
     </div>
-  <!-- Tab Menu -->       
-         <ul class="nav nav-pills nav-justified">
-  <li class="active"><a href="#">TIMVision</a></li>
-</ul>
- <ul class="nav nav-pills nav-justified">
-  <li class="active"><a href="#">Decoder TIMVision</a></li>
-</ul>
-<div class="container">
-     <div class="row featurette">
-          <h2 class="featurette-heading">ACTIVATION & RULES:</h2>
-          <p class="lead">
-<?php echo $timvision['activation'] ?></p>
-          </div>
-      </div>
-
           
-<div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Back...</h2>
-                <p><a class="btn btn-primary btn-lg" href="tvdescription.html" role="button">Description &raquo;</a></p>
-         </div>
-         <div class="col-md-4">
-          <h2>Learn More...</h2>
-             <p><a class="btn btn-primary btn-lg" href="tvfaq.html" role="button">FAQ &raquo;</a></p>
-         </div>
-      </div>
+  <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+         <?php echo $q1['question'] ?></a>
+      </h4>
     </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body"></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+         <?php echo $q2['question'] ?></a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body"></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+         <?php echo $q3['question'] ?></a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body"></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+         <?php echo $q4['question'] ?></a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body"></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        <?php echo $q5['question'] ?></a>
+      </h4>
+    </div>
+    <div id="collapse5" class="panel-collapse collapse">
+      <div class="panel-body"></div>
+    </div>
+  </div>      
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+         <?php echo $q6['question'] ?></a>
+      </h4>
+    </div>
+    <div id="collapse6" class="panel-collapse collapse">
+      <div class="panel-body"></div>
+    </div>
+  </div>      
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+         <?php echo $q7['question'] ?></a>
+      </h4>
+    </div>
+    <div id="collapse7" class="panel-collapse collapse">
+      <div class="panel-body"></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+         <?php echo $q8['question'] ?></a>
+      </h4>
+    </div>
+    <div id="collapse8" class="panel-collapse collapse">
+      <div class="panel-body"></div>
+    </div>
+  </div>      
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+         <?php echo $q9['question'] ?></a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body"></div>
+    </div>
+  </div>
+</div>
 </div>
 
-
+<div class="container" id="containerback">      
+<h2>Back to...</h2>
+    <p><a class="btn btn-primary btn-lg" href="timreadingdescription.html" role="button">Description &raquo;</a>
+    <a class="btn btn-primary btn-lg" href="timreadingactrules.html" role="button">Activation & Rules &raquo;</a></p>
+</div>
       <!-- Site footer -->
       <footer class="footer">
           <p class="align-right"> Telecom Italia 2012-P.IVA 00488410010</p>

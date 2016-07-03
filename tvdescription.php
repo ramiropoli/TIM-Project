@@ -2,7 +2,7 @@
 //database configuation
 $host = 'localhost';
 $port = '3306';
-$dbname = 'hypermedia';
+$dbname = 'hypermedia2';
 $charset = 'utf8';
 $username='root';
 $password='';
@@ -13,7 +13,7 @@ try {
 } catch(PDOException $e) {
   echo 'Attenzione: '.$e->getMessage();
 }
-$sql = $db->prepare("SELECT * FROM smartlife where id=1");
+$sql = $db->prepare("SELECT * FROM description where id=1");
 $sql->execute(); 
 $query_result = $sql->fetchAll();
 $timvision = $query_result[0];
@@ -198,8 +198,8 @@ $timvision = $query_result[0];
 
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading"><?php echo $timvision['name'] ?> <span class="text-muted">See what you can do.</span></h2>
-          <p class="lead"><?php echo $timvision['description'] ?></p>
+          <h2 class="featurette-heading"><?php echo $timvision['name'] ?> <span class="text-muted">See what you can do</span></h2>
+          <p class="lead"><?php echo $timvision['desc1'] ?></p>
         </div>
         <div class="col-md-5 col-md-pull-7">
                <div class="panel panel-primary">
@@ -253,14 +253,8 @@ $timvision = $query_result[0];
 
       <hr class="featurette-divider">
            <div class="row featurette">
-          <h2 class="featurette-heading">CHOOSE BETWEEN THOUSANDS OF NEW MOVIES <span class="text-muted">Believe it</span></h2>
-          <p class="lead">With TIMvision can choose between film, TV series, cartoons and documentaries , the last seven days of the major channels Rai, La7 and La7 archive, anywhere, anytime.
-
-More than 8,000 titles available, always on demand, in a single monthly subscription, to create your own schedule without commercial interruptions.
-
-In addition, in the section Videostore, you can find the latest blockbusters with a constantly updated catalog , to rent or buy at any time even without a subscription.
-
-Not to interrupt your marathon, you can watch also TIMvision on the web, on smartphones and tablets without consuming GB, and Smart TV, inserting the credentials chosen at the time of registration to the service.
+          <h2 class="featurette-heading"><?php echo $timvision['slogan'] ?></h2>
+          <p class="lead"><?php echo $timvision['desc2'] ?> 
           </div>   
            <hr class="featurette-divider">
           

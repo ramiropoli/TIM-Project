@@ -2,7 +2,7 @@
 //database configuation
 $host = 'localhost';
 $port = '3306';
-$dbname = 'hypermedia';
+$dbname = 'hypermedia2';
 $charset = 'utf8';
 $username='root';
 $password='';
@@ -13,7 +13,7 @@ try {
 } catch(PDOException $e) {
   echo 'Attenzione: '.$e->getMessage();
 }
-$sql = $db->prepare("SELECT * FROM smartlife where id=2");
+$sql = $db->prepare("SELECT * FROM description where id=2");
 $sql->execute(); 
 $query_result = $sql->fetchAll();
 $timreading = $query_result[0];
@@ -188,18 +188,18 @@ $timreading = $query_result[0];
           
   <!-- Tab Menu -->       
         <ul class="nav nav-pills nav-justified">
-  <li class="active"><a href="#">QUOTIDIANI</a></li>
+  <li class="active"><a href="#"><?php echo $timreading['name'] ?></a></li>
 </ul>
            <hr class="featurette-divider">
            <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading"><?php echo $timreading['name'] ?> <span class="text-muted">Choose your favourite magazine</span></h2>
-          <p class="lead"><?php echo $timreading['description'] ?></p>
+          <h2 class="featurette-heading"><?php echo $timreading['name'] ?> <span class="text-muted"><?php echo $timreading['slogan'] ?></span></h2>
+          <p class="lead"><?php echo $timreading['desc1'] ?></p>
         </div>
         <div class="col-md-5 col-md-pull-7">
                <div class="panel panel-primary">
                       <div class="panel-heading">
-                          <h3 class="panel-title">QUOTIDIANI</h3>
+                          <h3 class="panel-title"><?php echo $timreading['name'] ?></h3>
                       </div>
                       <div class="panel-body">
                       </div>

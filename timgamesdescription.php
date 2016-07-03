@@ -13,10 +13,10 @@ try {
 } catch(PDOException $e) {
   echo 'Attenzione: '.$e->getMessage();
 }
-$sql = $db->prepare("SELECT * FROM actrules where id=1");
+$sql = $db->prepare("SELECT * FROM description where id=3");
 $sql->execute(); 
 $query_result = $sql->fetchAll();
-$timvision = $query_result[0];
+$timgames = $query_result[0];
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ $timvision = $query_result[0];
   
     <!--<link rel="icon" href="C:\Users\Marco\Desktop\prove html\bootstrap-3.3.6\docs\favicon.ico">-->
 
-    <title>TV - Activation &amp; Rules</title>
+    <title>TIM Games - Description</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-3.3.6\css\bootstrap.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@ $timvision = $query_result[0];
     <link href="bootstrap-3.3.6\css\ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="tvactrules.css" rel="stylesheet">
+    <link href="timgamesdescription.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -182,39 +182,112 @@ $timvision = $query_result[0];
           
     <div class="container" id="path">
     <p>
-    <a href="category-of-services.html">Category of Services</a> > <a href="tv-entertainment.html">TV & Entertainment</a> > <a href="tv.html">TV</a> > TV Activation & Rules
+    <a href="category-of-services.html">Category of Services</a> > <a href="tv-entertainment.html">TV & Entertainment</a> > <a href="timgames.html">TIM Games</a> > TIM Games Description
     </p>      
     </div>
+          
   <!-- Tab Menu -->       
-         <ul class="nav nav-pills nav-justified">
-  <li class="active"><a href="#">TIMVision</a></li>
+        <ul class="nav nav-pills nav-justified">
+  <li class="active"><a href="#">I LOVE GAMES PROMO</a></li>
 </ul>
- <ul class="nav nav-pills nav-justified">
-  <li class="active"><a href="#">Decoder TIMVision</a></li>
-</ul>
-<div class="container">
-     <div class="row featurette">
-          <h2 class="featurette-heading">ACTIVATION & RULES:</h2>
+
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading"><?php echo $timgames['name'] ?><span class="text-muted"><?php echo $timgames['slogan'] ?></span></h2>
+          <p class="lead"><?php echo $timgames['desc1'] ?></p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+               <div class="panel panel-primary">
+                      <div class="panel-heading">
+                          <h3 class="panel-title"><?php echo $timgames['name'] ?></h3>
+                      </div>
+                      <div class="panel-body">
+                      </div>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide"  src="ImmaginiTIM/arcade.png" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Arcade</a></p>
+                <h3>The best classics for endless fun!</h3>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="ImmaginiTIM/sports.png" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sports</a></p>
+                <h3>Experience the thrill of the challenge!</h3>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="ImmaginiTIM/motors.png" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Motors</a></p>
+              <h3>Pure adrenaline!</h3>
+            </div>
+          </div>
+          </div>
+        <div class="item">
+          <img class="fourth-slide" src="ImmaginiTIM/cards.png" alt="Fourth slide">
+          <div class="container">
+            <div class="carousel-caption">
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Cards</a></p>
+                <h3>Enjoy your moments of relax!</h3>
+            </div>
+          </div>
+          </div>
+               </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+                      </div>
+    </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+           <div class="row featurette">
+          <h2 class="featurette-heading">Promotion costs:</h2>
           <p class="lead">
-<?php echo $timvision['activation'] ?></p>
+<?php echo $timgames['desc2'] ?>
+          </div>
+      <hr class="featurette-divider">
+           <div class="row featurette">
+          <h2 class="featurette-heading">Service costs:</h2>
+          <p class="lead">
+<?php echo $timgames['desc3'] ?>
+          </div>   
+           <hr class="featurette-divider">
+          
+                 <div class="container" id="links">   
+<h2>Learn More...</h2>
+<p><a class="btn btn-primary btn-lg" href="timgamesactrules.html" role="button">Activation & Rules &raquo;</a>
+<a class="btn btn-primary btn-lg" href="timgamesfaq.html" role="button">FAQ &raquo;</a>
+<a class="btn btn-primary btn-lg" href="#" role="button">For Devices &raquo;</a>
+<a class="btn btn-primary btn-lg" href="#" role="button">Buy &raquo;</a></p>
           </div>
       </div>
-
-          
-<div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Back...</h2>
-                <p><a class="btn btn-primary btn-lg" href="tvdescription.html" role="button">Description &raquo;</a></p>
-         </div>
-         <div class="col-md-4">
-          <h2>Learn More...</h2>
-             <p><a class="btn btn-primary btn-lg" href="tvfaq.html" role="button">FAQ &raquo;</a></p>
-         </div>
-      </div>
-    </div>
-</div>
-
+    
 
       <!-- Site footer -->
       <footer class="footer">

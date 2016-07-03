@@ -13,10 +13,10 @@ try {
 } catch(PDOException $e) {
   echo 'Attenzione: '.$e->getMessage();
 }
-$sql = $db->prepare("SELECT * FROM actrules where id=1");
+$sql = $db->prepare("SELECT * FROM actrules where id=2");
 $sql->execute(); 
 $query_result = $sql->fetchAll();
-$timvision = $query_result[0];
+$timreading = $query_result[0];
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ $timvision = $query_result[0];
   
     <!--<link rel="icon" href="C:\Users\Marco\Desktop\prove html\bootstrap-3.3.6\docs\favicon.ico">-->
 
-    <title>TV - Activation &amp; Rules</title>
+    <title>TIM Reading - Activation &amp; Rules</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-3.3.6\css\bootstrap.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@ $timvision = $query_result[0];
     <link href="bootstrap-3.3.6\css\ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="tvactrules.css" rel="stylesheet">
+    <link href="timreadingactrules.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -182,40 +182,43 @@ $timvision = $query_result[0];
           
     <div class="container" id="path">
     <p>
-    <a href="category-of-services.html">Category of Services</a> > <a href="tv-entertainment.html">TV & Entertainment</a> > <a href="tv.html">TV</a> > TV Activation & Rules
+    <a href="category-of-services.html">Category of Services</a> > <a href="tv-entertainment.html">TV & Entertainment</a> > <a href="timreading.html">TIM Reading</a> > TIM Reading Activation & Rules
     </p>      
     </div>
+          
   <!-- Tab Menu -->       
          <ul class="nav nav-pills nav-justified">
-  <li class="active"><a href="#">TIMVision</a></li>
+  <li class="active"><a href="#"><?php echo $timreading['name'] ?></a></li>
 </ul>
- <ul class="nav nav-pills nav-justified">
-  <li class="active"><a href="#">Decoder TIMVision</a></li>
-</ul>
-<div class="container">
-     <div class="row featurette">
-          <h2 class="featurette-heading">ACTIVATION & RULES:</h2>
+<div class="row featurette">
+          <h2 class="featurette-heading">ACTIVATION:</h2>
           <p class="lead">
-<?php echo $timvision['activation'] ?></p>
+<?php echo $timreading['activation'] ?>
+</p>
           </div>
-      </div>
+      <hr class="featurette-divider">
+           <div class="row featurette">
+          <h2 class="featurette-heading">RULES:</h2>
+          <p class="lead">
+<?php echo $timreading['rules'] ?>
+</p>
+          </div> 
 
           
 <div class="container">
       <div class="row">
         <div class="col-md-4">
           <h2>Back...</h2>
-                <p><a class="btn btn-primary btn-lg" href="tvdescription.html" role="button">Description &raquo;</a></p>
+                <p><a class="btn btn-primary btn-lg" href="timreadingdescription.html" role="button">Description &raquo;</a></p>
          </div>
          <div class="col-md-4">
           <h2>Learn More...</h2>
-             <p><a class="btn btn-primary btn-lg" href="tvfaq.html" role="button">FAQ &raquo;</a></p>
+             <p><a class="btn btn-primary btn-lg" href="timreadingfaq.html" role="button">FAQ &raquo;</a></p>
          </div>
       </div>
     </div>
 </div>
-
-
+      
       <!-- Site footer -->
       <footer class="footer">
           <p class="align-right"> Telecom Italia 2012-P.IVA 00488410010</p>
