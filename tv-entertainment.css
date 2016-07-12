@@ -17,6 +17,9 @@
     padding-left: 15%;
     margin-left: 1%;
 }
+.row{
+    padding-left: 10%;
+}
 
 .align-left{
     float:left
@@ -191,6 +194,10 @@
 #path{
     padding-left: 1%;
     }
+    
+.row{
+    padding-left: 1%;    
+    }
 #menu-accordeon{
     display:none;
 }
@@ -360,6 +367,9 @@
     padding-left: 1%;
 }
 .featurette{
-    margin: auto
-    }
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+}
 

@@ -217,7 +217,7 @@ $timgames = $query_result[0];
       </div>
     </div>
 
-
+</div>
       <!-- Site footer -->
       <footer class="footer">
           <p class="align-right"> Telecom Italia 2012-P.IVA 00488410010</p>
